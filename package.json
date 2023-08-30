@@ -4,8 +4,9 @@
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
+		"cloudflare:pages:watch": "vite build --watch",
+		"cloudflare:pages:dev": "wrangler pages dev .svelte-kit/cloudflare --port 8787",
 		"build": "vite build",
-		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"test": "vitest",
@@ -35,5 +36,9 @@
 		"vitest": "^0.34.0",
 		"wrangler": "^3.6.0"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"@auth/core": "^0.12.0",
+		"@auth/sveltekit": "^0.3.6"
+	}
 }
