@@ -10,9 +10,13 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"test": "vitest",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
-		"format": "prettier --plugin-search-dir . --write ."
+		"format": "prettier --plugin-search-dir . --write .",
+		"migrations:create": "wrangler d1 migratioins create DB",
+		"migrations:apply": "wrangler d1 migrations apply DB",
+		"migrations:apply:local": "wrangler d1 migrations apply DB --local"
 	},
 	"devDependencies": {
+		"@cloudflare/workers-types": "^4.20230821.0",
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/adapter-cloudflare": "^2.3.3",
 		"@sveltejs/kit": "^1.20.4",

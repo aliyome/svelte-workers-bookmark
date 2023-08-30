@@ -1,0 +1,12 @@
+name = "svelte-workers-bookmark"
+
+[[kv_namespaces]]
+binding = "SESSION_KV"
+id = "f6c7b436210f4be9a1ff8dff7c59696f"
+preview_id = "91a928b0a45a41e4b2cf650fe3dadb90"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "SVELTE_WORKERS_BOOKMARK_DB"
+database_id = "2ca68c18-a360-47d7-91a8-9773c6dba4c0"
+migrations_dir = "migrations"
